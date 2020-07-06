@@ -28,12 +28,12 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
       })),
       state('shrunken', style({
         'background-color': 'green',
-        'border-radius': '0',
+        borderRadius: '0',
         transform: 'translateX(0) scale(0.5)'
       })),
       transition('normal => highlighted', animate(300)),
       transition('highlighted => normal', animate(800)),
-      transition('shrunken <=> *', [
+      transition('* => shrunken', [
         style({
           'background-color': 'orange'
         }), animate(1000, style({
